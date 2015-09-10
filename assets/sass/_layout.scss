@@ -1,0 +1,25 @@
+@import 'variables';
+
+.first {
+  background-color: $color-first;
+}
+
+.second {
+  background-color: $color-second;
+}
+
+.third {
+  background-color: $color-third;
+}
+
+div {
+  padding: 50px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+body {
+  color: $font-color;
+  background-color: $color-background;
+  font-family: $font;
+}
