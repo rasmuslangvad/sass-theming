@@ -22,6 +22,10 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+      all: ['config/*.js', '*.js']
+    },
+
     watch: {
       express: {
         files: ['**/*.js'],
@@ -33,10 +37,14 @@ module.exports = function(grunt) {
       css: {
         files: '**/*.scss',
         tasks: ['sass']
+      },
+      jshint: {
+        files: ['<%= jshint.all %>'],
+        tasks: ['jshint']
       }
     },
   });
 
-	grunt.registerTask('default', ['sass', 'express:dev', 'watch']);
+	grunt.registerTask('default', ['sass', 'jshint', 'express:dev', 'watch']);
 
-}
+};
